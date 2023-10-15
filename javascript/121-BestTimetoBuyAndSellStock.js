@@ -1,7 +1,6 @@
 var maxProfit = function (prices) {
   lowest = 0;
   highest = 1;
-  maximumProfit = 0;
   totalProfit = 0;
   while (highest < prices.length) {
     if (prices[lowest] < prices[highest]) {
