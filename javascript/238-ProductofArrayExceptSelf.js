@@ -12,7 +12,7 @@ var productExceptSelf = function (nums) {
     j++;
   }
 
-  console.log(newArr);
+  return newArr;
 };
 
 nums = [-1, 1, 0, -3, 3];
