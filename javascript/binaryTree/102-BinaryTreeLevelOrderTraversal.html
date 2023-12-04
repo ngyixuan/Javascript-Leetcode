@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  class TreeNode {
+    constructor(val) {
+      this.val = val;
+      this.left = null;
+      this.right = null;
+    }
+  }
+
+  class BinaryTree {
+    constructor() {
+      this.root = null;
+    }
+    insert(val) {
+      const newNode = new TreeNode(val);
+
+      if (!this.root) {
+        this.root = newNode;
+        return this;
+      }
+
+      let current = this.root;
+
+      while (true) {
+        if (val === current.val) return undefined;
+
+        if (val < current.val) {
+          if (!current.left) {
+            current.left = newNode;
+            return this;
+          }
+          current = current.left;
+        } else {
+          if (!current.right) {
+            current.right = newNode;
+            return this;
+          }
+          current = current.right;
+        }
+      }
+    }
+  }
+
+  bst = new BinaryTree();
+  bst.insert(5);
+  bst.insert(7);
+  bst.insert(6);
+  bst.insert(3);
+  bst.insert(4);
+  bst.insert(1);
+  bst.insert(8);
+
+  var levelOrder = function (root) {
+    let res = [];
+    let queue = [];
+    if (root == null) return res;
+    queue.push(root);
+
+    while (queue.length) {
+      let currLevel = [];
+      let size = queue.length;
+      for (let i = 0; i < size; i++) {
+        let node = queue.shift();
+        currLevel.push(node.val);
+        if (node.left) queue.push(node.left);
+        if (node.right) queue.push(node.right);
+      }
+      res.push(currLevel);
+    }
+
+    return res;
+  };
+
+  console.log(levelOrder(bst.root));
+</script>
