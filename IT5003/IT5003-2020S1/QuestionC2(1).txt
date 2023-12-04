@@ -1,0 +1,81 @@
+graph data structure
+Store the data in adjacent list. Key of dictionary is the task u, and its value is the task its connect with.
+The graph is call Directed Acyclic Graph. 
+
+C.2
+Graph Data Structure: Adjacency List
+n, m = map(int, input().split())
+AL = [[] for i in range(n + 1)]
+for i in range(m):
+    u, v = map(int, input().split())
+    AL[u].append(v)
+initial_plan = list(map(int, input().split()))
+tasks_indegree = [0] * (n + 1)
+for i in range(1, n + 1):
+    for k in AL[i]:
+        tasks_indegree[k] += 1
+
+
+Subtask 1
+def subtask1(tasks_indegree, initial_plan):
+    for i in initial_plan:
+        if tasks_indegree[i] != 0:
+            return False
+        for k in AL[i]:
+            tasks_indegree[k] -= 1
+    return True
+
+
+"""
+What is/are the significance of this constraint?
+no need to consider whether initial plan is valid or not, which means we don't need to implement another plan.
+What is the time complexity of your Subtask 1 algorithm in terms of n and m?
+O(n*m)
+"""
+
+
+Subtask 2
+def subtask2(tasks_indegree):
+    plan = []
+    todo_tasks = []
+    for i in range(1, n + 1):
+        if tasks_indegree[i] == 0:
+            todo_tasks.append(i)
+    while todo_tasks:
+        task = todo_tasks.pop()
+        plan.append(task)
+        for k in AL[task]:
+            tasks_indegree[k] -= 1
+            if tasks_indegree[k] == 0:
+                todo_tasks.append(k)
+    return plan
+
+
+"""
+What is/are the significance of this constraint?
+no need to consider whether initial plan is valid or not, which means we just need to generate a valid plan.
+What is the time complexity of your Subtask 1 algorithm in terms of n and m?
+O(max(n,m))
+"""
+Subtask 3
+n, m = map(int, input().split())
+AL = [[] for i in range(n + 1)]
+for i in range(m):
+    u, v = map(int, input().split())
+    AL[u].append(v)
+initial_plan = list(map(int, input().split()))
+tasks_indegree = [0] * (n + 1)
+for i in range(1, n + 1):
+    for k in AL[i]:
+        tasks_indegree[k] += 1
+valid = subtask1(tasks_indegree.copy(), initial_plan)
+if valid:
+    print("Go Ahead")
+else:
+    plan = subtask2(tasks_indegree)
+    print(plan)
+
+"""
+What is the time complexity of your Subtask 1 algorithm in terms of n and m?
+O(n*m)
+"""

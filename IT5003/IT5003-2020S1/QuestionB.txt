@@ -1,0 +1,27 @@
+B1
+1. n-1
+2. n-1 (n)
+3. O(log(n))  ([::-1])
+4. tail
+5. 0 (0  and n-1)
+6. n (0 and n)
+7. list (DLL)
+
+B2
+1. log2(n) (log2(N+1)-1)
+2. queue (priority queue)
+3. 26
+
+B4
+1. n-1
+2. find the succesor of the smallest integer
+3. use count
+
+B5
+1. Dijkstra, time  complexity is O((V+E)logV)
+2. BFS, time complexity if O(V^2) (O(V+E))
+3. 6
+4. 1
+
+
+
