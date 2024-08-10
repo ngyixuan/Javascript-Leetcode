@@ -1,46 +1,64 @@
-var RandomizedSet = function () {
-  this.set = new Set();
+
+var RandomizedSet = function() {
+    this.map = new Map()
+    this.array = []
+
 };
 
-/**
+/** 
  * @param {number} val
  * @return {boolean}
  */
-RandomizedSet.prototype.insert = function (val) {
-  if (this.set.has(val)) {
-    return false;
+RandomizedSet.prototype.insert = function(val) {
+  if(this.map.has(val)){
+    return false
+
   }
-  this.set.add(val);
-  return true;
+  this.array.push(val)
+  this.map.set(val,this.array.length-1)
+  return true
 };
 
-/**
+/** 
  * @param {number} val
  * @return {boolean}
  */
-RandomizedSet.prototype.remove = function (val) {
-  if (this.set.has(val)) {
-    this.set.delete(val);
-    return true;
-  }
-  return false;
+RandomizedSet.prototype.remove = function(val) {
+    if(!this.map.has(val)){
+      return false
+    }
+    console.log(this.map)
+    console.log(this.array)
+    let index = this.map.get(val)
+    let last = this.array[this.array.length-1]
+    this.array[index] = last
+    this.map.set(last, index)
+    this.array.pop()
+    this.map.delete(val)
+
+    return true
 };
+
 /**
  * @return {number}
  */
-RandomizedSet.prototype.getRandom = function () {
-  let items = Array.from(this.set);
-  return items[Math.floor(Math.random() * items.length)];
+RandomizedSet.prototype.getRandom = function() {
+    let randomIndex = Math.floor(Math.random()*this.array.length)
+    return this.array[randomIndex]
 };
 
-// Your RandomizedSet object will be instantiated and called as such:
-var obj = new RandomizedSet();
-var param_1 = obj.insert(1);
-var param_1 = obj.insert(1);
-var param_1 = obj.insert(6);
-var param_1 = obj.insert(9);
-var param_2 = obj.remove(6);
-var param_3 = obj.getRandom();
+/** 
+ * Your RandomizedSet object will be instantiated and called as such:
+ * var obj = new RandomizedSet()
+ * var param_1 = obj.insert(val)
+ * var param_2 = obj.remove(val)
+ * var param_3 = obj.getRandom()
+ */
 
-console.log(obj);
-console.log(param_3);
+var obj = new RandomizedSet()
+console.log(obj.remove(0))
+console.log(obj.remove(0))
+console.log(obj.insert(0))
+console.log(obj.getRandom())
+console.log(obj.remove(0))
+console.log(obj.insert(0))

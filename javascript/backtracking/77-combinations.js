@@ -4,24 +4,22 @@
  * @return {number[][]}
  */
 var combine = function (n, k) {
-  let result = [];
-  let path = [];
-  const backtracking = function (n, k, startIndex) {
-    // console.log(startIndex, path);
-    if (path.length == k) {
-      result.push([...path]);
+  var res = [];
+  var path = [];
 
-      return;
+  var backtracking = function (start, n, k, path) {
+    if (path.length === k) {
+      res.push([...path]);
     }
-
-    for (let i = startIndex; i <= n; i++) {
+    for (let i = start; i <= n; i++) {
       path.push(i);
-
-      backtracking(n, k, i + 1);
+      backtracking(i + 1, n, k, path);
       path.pop();
     }
   };
-  backtracking(n, k, 1);
-  return result;
+
+  backtracking(1, n, k, path);
+  return res;
 };
-combine(4, 2);
+
+console.log(combine(1, 1));

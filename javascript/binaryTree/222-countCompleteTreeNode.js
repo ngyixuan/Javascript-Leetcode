@@ -43,23 +43,43 @@ class BinaryTree {
 bst = new BinaryTree();
 bst.insert(4);
 bst.insert(2);
-// bst.insert(1);
-// bst.insert(3);
-// bst.insert(7);
-// bst.insert(6);
-// bst.insert(5);
+bst.insert(1);
+bst.insert(3);
+bst.insert(7);
+bst.insert(6);
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
 
 var countNodes = function (root) {
-  const findTotal = function (node) {
-    if (!node) {
-      return 0;
-    }
+  var leftHeight = 0;
+  var rightHeight = 0;
+  var left = root;
+  var right = root;
+  while (left !== null) {
+    leftHeight++;
+    left = left.left;
+  }
+  while (right !== null) {
+    rightHeight++;
+    right = right.right;
+  }
 
-    let leftNum = findTotal(node.left);
-    let rightNum = findTotal(node.right);
-    return leftNum + rightNum + 1;
-  };
-  findTotal(root);
+  if (rightHeight === leftHeight) {
+    return Math.pow(2, rightHeight) - 1;
+  }
+
+  return 1 + countNodes(root.left) + countNodes(root.right);
 };
 
-countNodes(bst.root);
+console.log(countNodes(bst.root));

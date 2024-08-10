@@ -2,40 +2,36 @@
  * @param {string} digits
  * @return {string[]}
  */
-
-var letterDict = {
-  1: "",
-  2: "abc",
-  3: "def",
-  4: "ghi",
-  5: "jkl",
-  6: "mno",
-  7: "pqrs",
-  8: "tuv",
-  9: "wxyz",
-};
 var letterCombinations = function (digits) {
-  let result = [];
+  let numberMap = [
+    "",
+    "",
+    "abc",
+    "def",
+    "ghi",
+    "jkl",
+    "mno",
+    "pqrs",
+    "tuv",
+    "wxyz",
+  ];
   let path = [];
-  const combinations = function (digits, index) {
-    if (path.length == digits.length) {
-      result.push([...path]);
+  let result = [];
+  let k = digits.length;
+  if (!k) return result;
+  backtracking(digits, k, 0);
+  return result;
 
+  function backtracking(digits, k, startIndex) {
+    if (path.length == k) {
+      result.push(path.join(""));
       return;
     }
-    let letters = letterDict[digits[index]];
-
-    for (let i = 0; i < letters.length; i++) {
-      path.push(letters[i]);
-
-      combinations(digits, index + 1);
-
+    for (let i = 0; i < numberMap[digits[startIndex]].length; i++) {
+      path.push(numberMap[digits[startIndex]][i]);
+      backtracking(digits, k, startIndex + 1);
       path.pop();
     }
-  };
-  combinations(digits, 0);
-  //   console.log(result);
-  return result;
+  }
 };
-
-letterCombinations("23");
+console.log(letterCombinations("2"));

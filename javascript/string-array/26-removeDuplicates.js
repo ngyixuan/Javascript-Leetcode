@@ -1,17 +1,18 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
 var removeDuplicates = function (nums) {
-  j = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    if (i == nums.length - 1) {
-      nums[j] = nums[i];
-    }
-    if (nums[i] !== nums[i + 1]) {
-      nums[j] = nums[i];
-      j++;
+  let slow, fast;
+  if (nums.length == 0) return 0;
+  slow = 0;
+  fast = 1;
+  for (let i = fast; i < nums.length; i++) {
+    if (nums[slow] !== nums[fast]) {
+      slow++;
+      nums[slow] = nums[fast];
     }
   }
-  return j;
-};
 
-nums = [1];
-console.log(removeDuplicates(nums));
+  return slow + 1;
+};

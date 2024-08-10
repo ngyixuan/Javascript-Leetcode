@@ -1,6 +1,5 @@
 var MyStack = function () {
-  this.queue1 = [];
-  this.queue2 = [];
+  this.queue = [];
 };
 
 /**
@@ -8,36 +7,28 @@ var MyStack = function () {
  * @return {void}
  */
 MyStack.prototype.push = function (x) {
-  this.queue1.push(x);
+  this.queue.push(x);
 };
 
 /**
  * @return {number}
  */
 MyStack.prototype.pop = function () {
-  if (!this.queue1.length) {
-    [this.queue2, this.queue1] = [this.queue1, this.queue2];
-  }
-  while (this.queue1.length > 1) {
-    this.queue2.push(this.queue1.shift());
-  }
-  return this.queue1.pop();
+  this.queue.pop();
 };
 
 /**
  * @return {number}
  */
 MyStack.prototype.top = function () {
-  top = this.pop();
-  this.queue2.push(top);
-  return top;
+  return this.queue[this.queue.length - 1];
 };
 
 /**
  * @return {boolean}
  */
 MyStack.prototype.empty = function () {
-  return !this.queue1.length && !this.queue2.length;
+  return this.queue.length == 0;
 };
 
 /**
@@ -48,20 +39,3 @@ MyStack.prototype.empty = function () {
  * var param_3 = obj.top()
  * var param_4 = obj.empty()
  */
-
-var obj = new MyStack();
-obj.push(1);
-obj.push(2);
-var param_2 = obj.pop();
-obj.push(3);
-
-var param_3 = obj.top();
-obj.push(4);
-obj.push(5);
-var param_4 = obj.pop();
-
-var param_5 = obj.empty();
-
-console.log(param_2);
-console.log(param_3);
-console.log(param_4);

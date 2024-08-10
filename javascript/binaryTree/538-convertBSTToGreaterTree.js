@@ -1,3 +1,16 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+
 class TreeNode {
   constructor(val) {
     this.val = val;
@@ -39,50 +52,27 @@ class BinaryTree {
     }
   }
 }
-
 bst = new BinaryTree();
-// bst.insert(9);
-// bst.insert(3);
-// bst.insert(20);
-// bst.insert(15);
-// bst.insert(27);
-// console.log(bst)
-
+bst.insert(4);
 bst.insert(1);
-bst.insert(null);
+bst.insert(6);
+bst.insert(0);
 bst.insert(2);
+bst.insert(5);
+bst.insert(7);
+bst.insert(3);
+bst.insert(8);
 
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-let res= 0
-let depth = 0
-
-var maxDepth = function(root) {
-
-    traverse(root)
-    return res
+var convertBST = function (root) {
+  var sum = 0;
+  var traverse = function (root) {
+    if (root === null) return;
+    traverse(root.right);
+    sum += root.val;
+    root.val = sum;
+    traverse(root.left);
+  };
+  traverse(root);
 };
 
-var traverse = function (root){
-  if(root ==null) return
-  depth ++
-  if(root.left==null && root.right == null){
-    res = Math.max( res, depth)
-  }
-  traverse(root.left)
-  traverse(root.right)
-
-  depth --
-
-}
-console.log(maxDepth(bst.root));
+convertBST(bst.root);
