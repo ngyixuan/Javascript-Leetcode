@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      /* 填写样式 */
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label>牛客会陪伴大家</label>
+      <input id="checkbox" type="checkbox" checked />
+    </form>
+    <script type="text/javascript">
+      // 填写JavaScript
+      const checkbox = document.getElementById("checkbox");
+      checkbox.addEventListener("change", function () {
+        if (!this.checked) {
+          this.checked = true;
+        }
+      });
+    </script>
+  </body>
+</html>

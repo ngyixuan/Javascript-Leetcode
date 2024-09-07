@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function MyPromise(executor) {
+        this.state = "pending"; // Promise 的初始状态为 pending
+        this.value = undefined; // Promise 的初始值为 undefined
+        this.callbacks = []; // 存储 then 方法中的回调函数
+
+        const resolve = (value) => {
+          if (this.state === "pending") {
+            /*---------------在此补全代码：将 Promise 的状态设置为 fulfilled、存储解析后的值、执行所有回调函数的 onFulfilled 方法---------------*/
+            this.state = "fulfilled";
+            this.value = value;
+            this.callbacks.forEach((callback) =>
+              callback.onFulfilled(this.value),
+            );
+          }
+        };
+
+        const reject = (reason) => {
+          if (this.state === "pending") {
+            /*---------------在此补全代码：将 Promise 的状态设置为 rejected、存储拒绝的原因、执行所有回调函数的 onRejected 方法---------------*/
+            this.state = "rejected";
+            this.value = reason;
+            this.callbacks.forEach((callback) =>
+              callback.onRejected(this.value),
+            );
+          }
+        };
+
+        try {
+          executor(resolve, reject); // 执行执行器函数，并传入 resolve 和 reject 方法
+        } catch (error) {
+          reject(error); // 如果执行器函数抛出异常，则将 Promise 拒绝
+        }
+      }
+
+      MyPromise.prototype.then = function (onFulfilled, onRejected) {
+        return new MyPromise((resolve, reject) => {
+          const handleCallback = (callback) => {
+            try {
+              if (typeof callback === "function") {
+                /*---------------在此补全代码：执行回调函数，并传入 Promise 的值、如果回调函数返回一个 Promise，则等待该 Promise 解析或拒绝，并传递相应的处理函数、如果回调函数返回的不是 Promise，则将其作为解析值传递给下一个 Promise---------------*/
+                const result = callback(this.value);
+                if (result instanceof MyPromise) {
+                  result.then(resolve, reject);
+                } else {
+                  resolve(result);
+                }
+              } else {
+                resolve(this.value); // 如果回调函数不存在，则将当前 Promise 的值传递给下一个 Promise
+              }
+            } catch (error) {
+              reject(error); // 如果回调函数执行时抛出异常，则将 Promise 拒绝
+            }
+          };
+
+          if (this.state === "fulfilled") {
+            handleCallback(onFulfilled); // 如果当前 Promise 已经解析，则立即执行 onFulfilled 回调函数
+          } else if (this.state === "rejected") {
+            handleCallback(onRejected); // 如果当前 Promise 已经拒绝，则立即执行 onRejected 回调函数
+          } else {
+            this.callbacks.push({
+              onFulfilled: handleCallback.bind(null, onFulfilled), // 将回调函数绑定到 onFulfilled 上，并将其添加到回调列表中
+              onRejected: handleCallback.bind(null, onRejected), // 将回调函数绑定到 onRejected 上，并将其添加到回调列表中
+            });
+          }
+        });
+      };
+
+      MyPromise.prototype.catch = function (onRejected) {
+        return this.then(null, onRejected); // 使用 then 方法传递 null 作为 onFulfilled 回调函数，并传递 onRejected 作为 onRejected 回调函数
+      };
+
+      /*------------------------------以下是辅助测试MyPromise代码，无需修改------------------------------*/
+      function asyncTask() {
+        return new MyPromise((resolve, reject) => {
+          setTimeout(() => {
+            const randomNumber = Math.random();
+            if (randomNumber > 0.5) {
+              resolve(randomNumber);
+            } else {
+              reject("Error: Random number is less than 0.5");
+            }
+          }, 1000);
+        });
+      }
+
+      asyncTask()
+        .then((value) => {
+          console.log("Resolved:", value);
+          return value * 2;
+        })
+        .then((value) => {
+          console.log("Resolved:", value);
+          throw new Error("Custom error");
+        })
+        .catch((error) => {
+          console.log("Caught error:", error);
+        });
+    </script>
+  </body>
+</html>
