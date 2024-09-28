@@ -24,4 +24,3 @@ function filterObject(obj) {
   return result;
 }
 console.log(filterObject(a));
-//还有一个树形结构parentId和id
