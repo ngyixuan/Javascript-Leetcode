@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function instanceOf(obj, class_name) {
+    let proto = obj.__proto__;
+    // let proto = Object.getPrototypeOf(obj);
+    let prototype = class_name.prototype;
+    while (true) {
+      if (proto == null) return false;
+      if (proto == prototype) return true;
+      proto = proto.__proto__;
+    }
+  }
+
+  class Animal {}
+  class Dog extends Animal {}
+  class Jiwawa extends Dog {}
+  class Car {}
+  let dog = new Jiwawa();
+
+  console.log(instanceOf(dog, Jiwawa));
+</script>

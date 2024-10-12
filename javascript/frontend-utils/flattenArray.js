@@ -4,11 +4,13 @@ function flattenArray(arr) {
   let stack = [...arr];
   while (stack.length) {
     const next = stack.pop();
+    console.log(next);
     if (Array.isArray(next)) {
       stack.push(...next);
     } else {
       res.push(next);
     }
+    console.log(stack);
   }
   console.log(res.reverse());
   //   const flatten = (arr) => {
