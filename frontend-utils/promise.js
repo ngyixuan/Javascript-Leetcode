@@ -55,5 +55,5 @@ promise.then(
   },
   (reason) => {
     console.log("Rejected", reason);
-  },
+  }
 );

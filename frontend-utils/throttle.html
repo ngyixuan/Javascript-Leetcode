@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="throttleBtn">Click me</button>
+  </body>
+</html>
+<script>
+  //手写节流函数
+  function throttle(fn, limit) {
+    let oldTime = Date.now();
+    return function () {
+      let newTime = Date.now();
+      if (newTime - oldTime > limit) {
+        oldTime = newTime;
+        fn.apply(this, arguments);
+      }
+    };
+  }
+  function handleButtonClick() {
+    console.log("throttle click");
+  }
+
+  const throttleClick = throttle(handleButtonClick, 5000);
+
+  document
+    .getElementById("throttleBtn")
+    .addEventListener("click", throttleClick);
+</script>

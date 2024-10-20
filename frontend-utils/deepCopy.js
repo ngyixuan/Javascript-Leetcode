@@ -1,14 +1,17 @@
-function deepCopy(target, hash = new WeakMap()) {
-  if (typeof target !== "object" || target === null) return target;
-  if (hash.has(target)) return hash.get(target);
-  const cloneTarget = new target.constructor();
-  console.log("target", target, "cloneTarget", cloneTarget);
-  hash.set(target, cloneTarget);
-  Reflect.ownKeys(target).forEach((key) => {
-    cloneTarget[key] = deepCopy(target[key], hash);
-  });
+function deepCopy(obj) {
+  if (!obj || typeof obj !== "object") {
+    return;
+  }
 
-  return cloneTarget;
+  let newObject = Array.isArray(obj) ? [] : {};
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      newObject[key] =
+        typeof obj[key] === "object" ? deepCopy(obj[key]) : obj[key];
+    }
+  }
+
+  return newObject;
 }
 
 const original = {
@@ -21,14 +24,14 @@ const original = {
   hobbies: ["reading", "traveling"],
   circularRef: null, // 用于测试循环引用
 };
-// 模拟循环引用
-original.circularRef = original;
+// // 模拟循环引用
+// original.circularRef = original;
 
 const deepCopied = deepCopy(original);
 deepCopied.address.city = "New York";
 deepCopied.hobbies.push("music");
 
-console.log(original.address.city); // "Paris" (深拷贝不会影响原对象)
-console.log(original.hobbies); // ["reading", "traveling"] (深拷贝后修改新对象不会影响原对象)
-console.log(deepCopied.circularRef === deepCopied); // true (处理循环引用)
+console.log(original);
 console.log(deepCopied);
+
+// console.log(deepCopied.circularRef === deepCopied); // true (处理循环引用)

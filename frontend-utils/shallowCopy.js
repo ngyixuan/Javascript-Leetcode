@@ -7,7 +7,7 @@ function shallowCopy() {
     },
   };
 
-  const newObj = Object.assign({}, obj);
+  const newObj = Object.assign(obj);
   newObj.name.firstName = "Hina";
 
   //slice, concat
@@ -20,6 +20,24 @@ function shallowCopy() {
   const newArr4 = [...arr];
   const newArr5 = { ...obj };
   console.log(newArr5);
+
+  //手写浅拷贝
+  function shallowCopyFn(object) {
+    if (!object || typeof object !== "object") {
+      return;
+    }
+    let newObj = Array.isArray(object) ? [] : {};
+
+    for (let key in object) {
+      if (object.hasOwnProperty(key)) {
+        newObj[key] = object[key];
+      }
+    }
+
+    return newObj;
+  }
+
+  console.log(shallowCopyFn(obj) === obj);
 }
 
 shallowCopy();
