@@ -18,48 +18,53 @@
  * @param {number[]} postorder
  * @return {TreeNode}
  */
-
-function TreeNode(val, left, right) {
-  this.val = val === undefined ? 0 : val;
-  this.left = left === undefined ? null : left;
-  this.right = right === undefined ? null : right;
-}
 var buildTree = function (inorder, postorder) {
-  let inorderMap = new Map();
-
+  let valToIndex = new Map();
   for (let i = 0; i < inorder.length; i++) {
-    inorderMap.set(inorder[i], i);
+    valToIndex.set(inorder[i], i);
   }
-
-  function build(inStart, inEnd, postStart, postEnd) {
+  var build = function (
+    inorder,
+    inStart,
+    inEnd,
+    postorder,
+    postStart,
+    postEnd
+  ) {
     if (inStart > inEnd) return null;
     let rootVal = postorder[postEnd];
+    let rootIndex = valToIndex.get(rootVal);
+    let leftSize = rootIndex - inStart;
     let root = new TreeNode(rootVal);
-    let inorderRootIndex = inorderMap.get(rootVal);
-
-    let leftSize = inorderRootIndex - inStart;
-
     root.left = build(
+      inorder,
       inStart,
-      inorderRootIndex - 1,
+      rootIndex - 1,
+      postorder,
       postStart,
-      postStart + leftSize - 1,
+      postStart + leftSize - 1
     );
 
     root.right = build(
-      inorderRootIndex + 1,
+      inorder,
+      rootIndex + 1,
       inEnd,
+      postorder,
       postStart + leftSize,
-      postEnd - 1,
+      postEnd - 1
     );
 
     return root;
-  }
+  };
 
-  return build(0, inorder.length - 1, 0, postorder.length - 1);
+  return build(
+    inorder,
+    0,
+    inorder.length - 1,
+    postorder,
+    0,
+    postorder.length - 1
+  );
 };
-// @lc code=end
 
-let inorder = [9, 3, 15, 20, 7],
-  postorder = [9, 15, 7, 20, 3];
-console.log(buildTree(inorder, postorder));
+// @lc code=end

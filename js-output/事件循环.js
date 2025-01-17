@@ -19,37 +19,60 @@
 // });
 // console.log("script end");
 
+// console.log(1);
+// setTimeout(() => {
+//   console.log(2);
+//   process.nextTick(() => {
+//     console.log(3);
+//   });
+//   new Promise((resolve) => {
+//     console.log(4);
+//     resolve();
+//   }).then(() => {
+//     console.log(5);
+//   });
+// });
+// new Promise((resolve) => {
+//   console.log(7);
+//   resolve();
+// }).then(() => {
+//   console.log(8);
+// });
+// process.nextTick(() => {
+//   console.log(6);
+// });
+// setTimeout(() => {
+//   console.log(9);
+//   process.nextTick(() => {
+//     console.log(10);
+//   });
+//   new Promise((resolve) => {
+//     console.log(11);
+//     resolve();
+//   }).then(() => {
+//     console.log(12);
+//   });
+// });
+
 console.log(1);
+
 setTimeout(() => {
   console.log(2);
-  process.nextTick(() => {
-    console.log(3);
-  });
-  new Promise((resolve) => {
-    console.log(4);
-    resolve();
-  }).then(() => {
-    console.log(5);
-  });
 });
+
 new Promise((resolve) => {
-  console.log(7);
-  resolve();
-}).then(() => {
-  console.log(8);
+  console.log(4);
+  resolve(5);
+
+  Promise.resolve().then(() => {
+    console.log(6);
+  });
+}).then((data) => {
+  console.log(data);
 });
-process.nextTick(() => {
-  console.log(6);
-});
+
 setTimeout(() => {
-  console.log(9);
-  process.nextTick(() => {
-    console.log(10);
-  });
-  new Promise((resolve) => {
-    console.log(11);
-    resolve();
-  }).then(() => {
-    console.log(12);
-  });
+  console.log(7);
 });
+
+console.log(8);

@@ -3,12 +3,14 @@
  * @return {number}
  */
 var maxProfit = function (prices) {
-  let result = 0;
+  let maxProfit = 0;
   for (let i = 0; i < prices.length - 1; i++) {
-    result += Math.max(prices[i + 1] - prices[i], 0);
+    if (prices[i + 1] - prices[i] > 0) {
+      maxProfit += prices[i + 1] - prices[i];
+    }
   }
-  return result;
-};
 
-prices = [1, 2, 3, 4, 5];
+  return maxProfit;
+};
+let prices = [1, 2, 3, 4, 5];
 console.log(maxProfit(prices));
