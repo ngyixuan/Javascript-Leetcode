@@ -11,41 +11,40 @@
  */
 var threeSum = function (nums) {
   nums.sort((a, b) => a - b);
-  return nSum(nums, 3, 0, 0);
-};
-
-var nSum = function (nums, n, start, target) {
-  let res = [];
-  if (nums.length < n || n < 2) return res;
-  if (n == 2) {
-    let lo = start;
-    let hi = nums.length - 1;
-    while (lo < hi) {
-      let sum = nums[lo] + nums[hi];
-      if (sum < target) {
-        lo++;
-      } else if (sum > target) {
-        hi--;
-      } else {
-        res.push([nums[lo], nums[hi]]);
-        lo++;
-        hi--;
-        while (lo < hi && nums[lo] === nums[lo - 1]) lo++;
-        while (lo < hi && nums[hi] === nums[hi + 1]) hi--;
+  function nSum(n, start, target) {
+    let res = [];
+    if (n == 2) {
+      let left = start;
+      let right = nums.length - 1;
+      while (left < right) {
+        let sum = nums[left] + nums[right];
+        let lo = nums[left];
+        let hi = nums[right];
+        if (sum < target) {
+          while (left < right && nums[left] === lo) left++;
+        } else if (sum > target) {
+          while (left < right && nums[right] === hi) right--;
+        } else {
+          res.push([nums[left], nums[right]]);
+          while (left < right && nums[left] === lo) left++;
+          while (left < right && nums[right] === hi) right--;
+        }
+      }
+    } else {
+      for (let i = start; i < nums.length; i++) {
+        if (i > start && nums[i] === nums[i - 1]) continue;
+        let sub = nSum(n - 1, i + 1, target - nums[i]);
+        for (let arr of sub) {
+          arr.push(nums[i]);
+          res.push(arr);
+        }
       }
     }
-  } else {
-    for (let i = start; i < nums.length; i++) {
-      let sub = nSum(nums, n - 1, i + 1, target - nums[i]);
-      for (let arr of sub) {
-        res.push([nums[i], ...arr]);
-      }
-      while (i < nums.length && nums[i] === nums[i + 1]) i++;
-    }
+    return res;
   }
-  return res;
-};
 
+  return nSum(3, 0, 0);
+};
 // @lc code=end
 let nums = [-1, 0, 1, 2, -1, -4];
 console.log(threeSum(nums));

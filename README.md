@@ -22,11 +22,12 @@
 ### 双指针
 
 - 5.最长回文子串 [Leetcode](https://leetcode.com/problems/longest-palindromic-substring/description/) ｜[力扣](https://leetcode.cn/problems/longest-palindromic-substring/description/) 🔥🔥🔥
-- 15.三数之和 🔥🔥🔥
+- 15.三数之和 [Leetcode](https://leetcode.com/problems/3sum/description/) ｜[力扣](https://leetcode.cn/problems/3sum/description/) 🔥🔥🔥
 - 88.合并两个有序数组 🔥🔥🔥
 - 125.验证回文串 🔥🔥🔥
-- 141.环形链表
+- 141.环形链表 🔥🔥🔥
 - 142.环形链表 II
+- 26.删除排序数组中的重复项
 - 151.反转字符串中的单词
 - 27.移除元素
 - 33.搜索旋转排序数组
@@ -41,7 +42,4 @@
 - 392.判断子序列
 - 287.寻找重复数
 - 18.四数之和
-- 26.删除排序数组中的重复项
 - 76.最小覆盖子串
-
-  -- （待更新） --

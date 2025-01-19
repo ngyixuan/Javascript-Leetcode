@@ -9,31 +9,25 @@
  * @param {string} s
  * @return {string}
  */
-
-var isPalindrome = function (s, left, right) {
-  while (left >= 0 && right < s.length && s[left] === s[right]) {
-    left--;
-    right++;
-  }
-
-  return s.substring(left + 1, right);
-};
-
 var longestPalindrome = function (s) {
   let res = "";
-  for (let i = 0; i < s.length; i++) {
-    let palindrome1 = isPalindrome(s, i, i);
-    let palindrome2 = isPalindrome(s, i, i + 1);
+  function isPalindrome(left, right) {
+    while (s[left] == s[right] && left >= 0 && right < s.length) {
+      left--;
+      right++;
+    }
+    return s.substring(left + 1, right);
+  }
 
-    res = res.length > palindrome1.length ? res : palindrome1;
-    res = res.length > palindrome2.length ? res : palindrome2;
+  for (let i = 0; i < s.length; i++) {
+    let isPalindrome1 = isPalindrome(i, i);
+    let isPalindrome2 = isPalindrome(i, i + 1);
+    res = res.length > isPalindrome1.length ? res : isPalindrome1;
+    res = res.length > isPalindrome2.length ? res : isPalindrome2;
   }
 
   return res;
 };
-
 // @lc code=end
-
-let s = "babad";
-
+let s = "bb";
 console.log(longestPalindrome(s));
