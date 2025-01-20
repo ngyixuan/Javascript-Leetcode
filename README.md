@@ -23,13 +23,13 @@
 
 - 5.最长回文子串 [Leetcode](https://leetcode.com/problems/longest-palindromic-substring/description/) ｜[力扣](https://leetcode.cn/problems/longest-palindromic-substring/description/) 🔥🔥🔥
 - 15.三数之和 [Leetcode](https://leetcode.com/problems/3sum/description/) ｜[力扣](https://leetcode.cn/problems/3sum/description/) 🔥🔥🔥
-- 88.合并两个有序数组 🔥🔥🔥
-- 125.验证回文串 🔥🔥🔥
-- 141.环形链表 🔥🔥🔥
-- 142.环形链表 II
-- 26.删除排序数组中的重复项
-- 151.反转字符串中的单词
-- 27.移除元素
+- 88.合并两个有序数组 [Leetcode](https://leetcode.com/problems/merge-sorted-array/description/) ｜[力扣](https://leetcode.cn/problems/merge-sorted-array/description/) 🔥🔥🔥
+- 125.验证回文串 [Leetcode](https://leetcode.com/problems/valid-palindrome/description/) ｜[力扣](https://leetcode.cn/problems/valid-palindrome/description/)
+- 141.环形链表 [Leetcode](https://leetcode.com/problems/linked-list-cycle/description/) ｜[力扣](https://leetcode.cn/problems/linked-list-cycle/description/)
+- 142.环形链表 II [Leetcode](https://leetcode.com/problems/linked-list-cycle-ii/description/) ｜[力扣](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
+- 26.删除排序数组中的重复项 [Leetcode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) ｜[力扣](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/)
+- 151.反转字符串中的单词 [Leetcode](https://leetcode.com/problems/reverse-words-in-a-string/description/) ｜[力扣](https://leetcode.cn/problems/reverse-words-in-a-string/description/)
+- 27.移除元素 [Leetcode](https://leetcode.com/problems/remove-element/description/) ｜[力扣](https://leetcode.cn/problems/remove-element/description/)
 - 33.搜索旋转排序数组
 - 209.长度最小的子数组
 - 283.移动零

@@ -16,7 +16,6 @@ var merge = function (nums1, m, nums2, n) {
   let i = m - 1;
   let j = n - 1;
   let p = m + n - 1;
-
   while (i >= 0 && j >= 0) {
     if (nums1[i] > nums2[j]) {
       nums1[p] = nums1[i];
@@ -32,12 +31,10 @@ var merge = function (nums1, m, nums2, n) {
     j--;
     p--;
   }
-
-  console.log(nums1);
 };
 // @lc code=end
-let nums1 = [0];
-let m = 0;
-let nums2 = [1];
-let n = 1;
+let nums1 = [7, 9, 3, 0, 0, 0],
+  m = 3,
+  nums2 = [1, 1, 1],
+  n = 3;
 merge(nums1, m, nums2, n);
