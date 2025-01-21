@@ -30,10 +30,9 @@
 - 26.删除排序数组中的重复项 [Leetcode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) ｜[力扣](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/)
 - 151.反转字符串中的单词 [Leetcode](https://leetcode.com/problems/reverse-words-in-a-string/description/) ｜[力扣](https://leetcode.cn/problems/reverse-words-in-a-string/description/)
 - 27.移除元素 [Leetcode](https://leetcode.com/problems/remove-element/description/) ｜[力扣](https://leetcode.cn/problems/remove-element/description/)
-- 33.搜索旋转排序数组
-- 209.长度最小的子数组
-- 283.移动零
-- 19.删除链表的倒数第 N 个结点
+- 209.长度最小的子数组 [Leetcode](https://leetcode.com/problems/minimum-size-subarray-sum/description/) ｜[力扣](https://leetcode.cn/problems/minimum-size-subarray-sum/description/)
+- 283.移动零 [Leetcode](https://leetcode.com/problems/move-zeroes/description/) ｜[力扣](https://leetcode.cn/problems/move-zeroes/description/)
+- 19.删除链表的倒数第 N 个结点 [Leetcode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/) ｜[力扣](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)
 - 349.两个数组的交集
 - 42.接雨水
 - 344.反转字符串
@@ -43,3 +42,7 @@
 - 287.寻找重复数
 - 18.四数之和
 - 76.最小覆盖子串
+
+### 二分查找
+
+- 33.搜索旋转排序数组

@@ -10,8 +10,8 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function (nums) {
-  let fast = 0;
   let slow = 0;
+  let fast = 0;
   while (fast < nums.length) {
     if (nums[fast] !== 0) {
       nums[slow] = nums[fast];
@@ -19,13 +19,11 @@ var moveZeroes = function (nums) {
     }
     fast++;
   }
-
-  while (slow < fast) {
+  while (slow < nums.length) {
     nums[slow] = 0;
     slow++;
   }
-  return nums;
 };
 // @lc code=end
-let nums = [0];
-console.log(moveZeroes(nums));
+let nums = [0, 1, 0, 3, 12];
+moveZeroes(nums);
