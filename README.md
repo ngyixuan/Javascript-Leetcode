@@ -8,6 +8,10 @@
 
 ## 前端经典 Leetcode
 
+### 数组
+
+- 349.两个数组的交集 [Leetcode](https://leetcode.com/problems/intersection-of-two-arrays/description/) ｜[力扣](https://leetcode.cn/problems/intersection-of-two-arrays/description/)
+
 ### 哈希表
 
 - 3.无重复字符的最长子串 [Leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) ｜[力扣](https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/) 🔥🔥🔥
@@ -33,9 +37,8 @@
 - 209.长度最小的子数组 [Leetcode](https://leetcode.com/problems/minimum-size-subarray-sum/description/) ｜[力扣](https://leetcode.cn/problems/minimum-size-subarray-sum/description/)
 - 283.移动零 [Leetcode](https://leetcode.com/problems/move-zeroes/description/) ｜[力扣](https://leetcode.cn/problems/move-zeroes/description/)
 - 19.删除链表的倒数第 N 个结点 [Leetcode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/) ｜[力扣](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)
-- 349.两个数组的交集
-- 42.接雨水
-- 344.反转字符串
+- 42.接雨水 [Leetcode](https://leetcode.com/problems/trapping-rain-water/description/) ｜[力扣](https://leetcode.cn/problems/trapping-rain-water/description/)
+- 344.反转字符串 [Leetcode](https://leetcode.com/problems/reverse-string/description/) ｜[力扣](https://leetcode.cn/problems/reverse-string/description/)
 - 16.最接近的三数之和
 - 167.两数之和 II - 输入有序数组
 - 392.判断子序列
