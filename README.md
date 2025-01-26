@@ -39,8 +39,8 @@
 - 19.删除链表的倒数第 N 个结点 [Leetcode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/) ｜[力扣](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)
 - 42.接雨水 [Leetcode](https://leetcode.com/problems/trapping-rain-water/description/) ｜[力扣](https://leetcode.cn/problems/trapping-rain-water/description/)
 - 344.反转字符串 [Leetcode](https://leetcode.com/problems/reverse-string/description/) ｜[力扣](https://leetcode.cn/problems/reverse-string/description/)
-- 16.最接近的三数之和
-- 167.两数之和 II - 输入有序数组
+- 16.最接近的三数之和 [Leetcode](https://leetcode.com/problems/3sum-closest/description/) ｜[力扣](https://leetcode.cn/problems/3sum-closest/description/)
+- 167.两数之和 II - 输入有序数组 [Leetcode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ｜[力扣](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/description/)
 - 392.判断子序列
 - 287.寻找重复数
 - 18.四数之和
