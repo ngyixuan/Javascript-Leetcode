@@ -41,10 +41,10 @@
 - 344.反转字符串 [Leetcode](https://leetcode.com/problems/reverse-string/description/) ｜[力扣](https://leetcode.cn/problems/reverse-string/description/)
 - 16.最接近的三数之和 [Leetcode](https://leetcode.com/problems/3sum-closest/description/) ｜[力扣](https://leetcode.cn/problems/3sum-closest/description/)
 - 167.两数之和 II - 输入有序数组 [Leetcode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ｜[力扣](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/description/)
-- 392.判断子序列
-- 287.寻找重复数
-- 18.四数之和
-- 76.最小覆盖子串
+- 392.判断子序列 [Leetcode](https://leetcode.com/problems/is-subsequence/description/) ｜[力扣](https://leetcode.cn/problems/is-subsequence/description/)
+- 287.寻找重复数 [Leetcode](https://leetcode.com/problems/find-the-duplicate-number/description/) ｜[力扣](https://leetcode.cn/problems/find-the-duplicate-number/description/)
+- 18.四数之和 [Leetcode](https://leetcode.com/problems/4sum/description/) ｜[力扣](https://leetcode.cn/problems/4sum/description/)
+- 76.最小覆盖子串 [Leetcode](https://leetcode.com/problems/minimum-window-substring/description/) ｜[力扣](https://leetcode.cn/problems/minimum-window-substring/description/)
 
 ### 二分查找
 
