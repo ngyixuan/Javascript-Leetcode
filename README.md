@@ -2,14 +2,34 @@
 
 仓库包括**三个**部分：
 
-- Leetcode 经典题目
+- Leetcode 前端经典题目
 - JS 经典手写题
 - 高频前端面试题
 
-## 前端经典 Leetcode
+## Leetcode 前端经典题目
 
-### 数组
+### 数组 + 字符串
 
+- 415.字符串相加 🔥🔥🔥
+- 14.最长公共前缀 🔥🔥🔥
+- 6.Z 字形变换
+- 28.找出字符串中第一个匹配项的下标
+- 58.最后一个单词的长度
+- 68.文本左右对齐
+- 136.只出现一次的数字
+- 137.只出现一次的数字 II、
+- 151.反转字符串中的单词
+- 165.比较版本号
+- 189.轮转数组
+- 191.位 1 的个数
+- 238.除自身以外数组的乘积
+- 274.H 指数
+- 384.打乱数组
+- 1013.将数组分成和相等的三个部分
+
+### 并查集
+
+- 128.最长连续序列
 - 349.两个数组的交集 [Leetcode](https://leetcode.com/problems/intersection-of-two-arrays/description/) ｜[力扣](https://leetcode.cn/problems/intersection-of-two-arrays/description/)
 
 ### 哈希表
@@ -22,6 +42,8 @@
 - 219.存在重复元素 II [Leetcode](https://leetcode.com/problems/contains-duplicate-ii/description/) ｜[力扣](https://leetcode.cn/problems/contains-duplicate-ii/description/)
 - 242.有效的字母异位词 [Leetcode](https://leetcode.com/problems/valid-anagram/description/) ｜[力扣](https://leetcode.cn/problems/valid-anagram/description/)
 - 383.赎金信 [Leetcode](https://leetcode.com/problems/ransom-note/description/) ｜[力扣](https://leetcode.cn/problems/ransom-note/description/)
+- 169.多数元素
+- 380.O(1) 时间插入、删除和获取随机元素
 
 ### 双指针
 
@@ -44,6 +66,9 @@
 - 392.判断子序列 [Leetcode](https://leetcode.com/problems/is-subsequence/description/) ｜[力扣](https://leetcode.cn/problems/is-subsequence/description/)
 - 287.寻找重复数 [Leetcode](https://leetcode.com/problems/find-the-duplicate-number/description/) ｜[力扣](https://leetcode.cn/problems/find-the-duplicate-number/description/)
 - 18.四数之和 [Leetcode](https://leetcode.com/problems/4sum/description/) ｜[力扣](https://leetcode.cn/problems/4sum/description/)
+- 11.盛最多水的容器 [Leetcode](https://leetcode.com/problems/container-with-most-water/description/) ｜[力扣](https://leetcode.cn/problems/container-with-most-water/description/)
+- 80.删除有序数组中的重复项 II
+- 845.数组中的最长山脉
 
 ### 滑动窗口
 
