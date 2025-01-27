@@ -11,27 +11,28 @@
  * @return {string}
  */
 var addStrings = function (num1, num2) {
-  let carry = 0;
-  let newStr = "";
-
-  let maxLen = Math.max(num1.length, num2.length);
+  let maxLen = num1.length > num2.length ? num1.length : num2.length;
   num1 = num1.padStart(maxLen, "0");
   num2 = num2.padStart(maxLen, "0");
-
+  let sum = "";
+  let carry = 0;
   for (let i = maxLen - 1; i >= 0; i--) {
     let temp = parseInt(num1[i]) + parseInt(num2[i]) + carry;
-    carry = Math.floor(temp / 10);
-    newStr = (temp % 10) + newStr;
+    if (temp > 9) {
+      carry = Math.floor(temp / 10);
+    } else {
+      carry = 0;
+    }
+    temp %= 10;
+    sum = temp + sum;
   }
-
-  if (carry) {
-    newStr = carry + newStr;
+  if (carry > 0) {
+    sum = carry + sum;
   }
-
-  return newStr;
+  return sum;
 };
-
-let num1 = "456";
-let num2 = "77";
-console.log(addStrings(num1, num2));
 // @lc code=end
+
+let num1 = "1999",
+  num2 = "9999";
+console.log(addStrings(num1, num2));
