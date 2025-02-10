@@ -18,37 +18,46 @@
  * @param {number[]} inorder
  * @return {TreeNode}
  */
-
 function TreeNode(val, left, right) {
   this.val = val === undefined ? 0 : val;
   this.left = left === undefined ? null : left;
   this.right = right === undefined ? null : right;
 }
 var buildTree = function (preorder, inorder) {
-  let inorderIndexMap = new Map();
+  let indexMap = new Map();
   for (let i = 0; i < inorder.length; i++) {
-    inorderIndexMap.set(inorder[i], i);
+    indexMap.set(inorder[i], i);
   }
-  function build(preStart, preEnd, inStart, inEnd) {
-    if (inStart > inEnd) return null;
-    let rootIndex = inorderIndexMap.get(preorder[preStart]);
+
+  function dfs(preStart, preEnd, preorder, inStart, inEnd, inorder) {
+    if (preStart > preEnd) return null;
+    let rootIndex = indexMap.get(preorder[preStart]);
     let root = new TreeNode(preorder[preStart]);
     let leftSize = rootIndex - inStart;
-    root.left = build(
+    root.left = dfs(
       preStart + 1,
       preStart + leftSize,
+      preorder,
       inStart,
       rootIndex - 1,
+      inorder
     );
-    root.right = build(preStart + leftSize + 1, preEnd, rootIndex + 1, inEnd);
+    root.right = dfs(
+      preStart + leftSize + 1,
+      preEnd,
+      preorder,
+      rootIndex + 1,
+      inEnd,
+      inorder
+    );
 
     return root;
   }
 
-  return build(0, preorder.length - 1, 0, inorder.length - 1);
+  return dfs(0, preorder.length - 1, preorder, 0, inorder.length, inorder);
 };
 // @lc code=end
+
 let preorder = [3, 9, 20, 15, 7],
   inorder = [9, 3, 15, 20, 7];
-
 console.log(buildTree(preorder, inorder));

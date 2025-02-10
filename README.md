@@ -1,12 +1,8 @@
-## 前端小白逆袭之路
+## Javascript 前端力扣题解
 
-仓库包括**三个**部分：
+本仓库使用 Javascript 作为主要语言，挑选前端必做的力扣题目，所有题解都会发布在相关分类文件里
 
-- Leetcode 前端经典题目
-- JS 经典手写题
-- 高频前端面试题
-
-## Leetcode 前端经典题目
+## 题目分类
 
 ### 数组 + 字符串
 
@@ -77,7 +73,14 @@
 
 ### 二分查找
 
-- 33.搜索旋转排序数组
+- 33.搜索旋转排序数组 [Leetcode](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) ｜[力扣](https://leetcode.cn/problems/search-in-rotated-sorted-array/description/) 🔥🔥🔥
+- 34.在排序数组中查找元素的第一个和最后一个位置 [Leetcode](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/) ｜[力扣](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/) 🔥🔥🔥
+- 35.搜索插入位置 [Leetcode](https://leetcode.com/problems/search-insert-position/description/) ｜[力扣](https://leetcode.cn/problems/search-insert-position/description/)
+- 704.二分查找 [Leetcode](https://leetcode.com/problems/binary-search/description/) ｜[力扣](https://leetcode.cn/problems/binary-search/description/) 🔥🔥🔥
+- 74.搜索二维矩阵 [Leetcode](https://leetcode.com/problems/search-a-2d-matrix/description/) ｜[力扣](http://leetcode.cn/problems/search-a-2d-matrix/description/) 🔥🔥🔥
+- 69.x 的平方根 [Leetcode](https://leetcode.com/problems/sqrtx/description/) ｜[力扣](https://leetcode.cn/problems/sqrtx/description/) 🔥🔥🔥
+- 162.寻找峰值 [Leetcode](https://leetcode.com/problems/find-peak-element/submissions/1537785149/) ｜[力扣](https://leetcode.cn/problems/find-peak-element/description/) 🔥🔥
+- 153.寻找旋转排序数组中的最小值 [Leetcode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/) ｜[力扣](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/) 🔥🔥
 
 ### 栈
 
@@ -86,6 +89,27 @@
 - 150.逆波兰表达式求值
 - 224.基本计算器
 - 402.移掉 K 位数字
+
+### DFS
+
+- 200.岛屿数量 [Leetcode](https://leetcode.com/problems/number-of-islands/description/) ｜[力扣](https://leetcode.cn/problems/number-of-islands/description/) 🔥🔥🔥
+- 130.被围绕的区域 [Leetcode](https://leetcode.com/problems/surrounded-regions/description/) ｜[力扣](https://leetcode.cn/problems/surrounded-regions/description/) 🔥🔥
+- 133.克隆图 [Leetcode](https://leetcode.com/problems/clone-graph/description/) ｜[力扣](https://leetcode.cn/problems/clone-graph/description/) 🔥🔥
+- 399.除法求值 [Leetcode](https://leetcode.com/problems/evaluate-division/description/) ｜[力扣](https://leetcode.cn/problems/evaluate-division/description/)
+
+### 层序遍历
+
+- 199.二叉树的右视图 [Leetcode](https://leetcode.com/problems/binary-tree-right-side-view/description/) ｜[力扣](https://leetcode.cn/problems/binary-tree-right-side-view/description/) 🔥🔥🔥
+
+### 二叉树
+
+- 105.从前序与中序遍历序列构造二叉树 [Leetcode](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) ｜[力扣](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) 🔥🔥🔥
+
+### 二叉搜索树
+
+- 230.二叉搜索树中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/) 🔥🔥🔥
+
+-- 待更新 --
 
 ### 链表
 
@@ -103,14 +127,6 @@
 
 -- 待更新 --
 
-### 二分查找树
-
--- 待更新 --
-
-### DFS
-
--- 待更新 --
-
 ### 动态规划
 
 -- 待更新 --
@@ -121,16 +137,10 @@
 
 ### 数学
 
+- 50.Pow(x, n) [Leetcode](https://leetcode.com/problems/powx-n/) ｜[力扣](https://leetcode.cn/problems/powx-n/description/) 🔥🔥🔥
+
 -- 待更新 --
 
 ### 矩阵
-
--- 待更新 --
-
-## JS 经典手写题
-
--- 待更新 --
-
-## 高频前端面试题
 
 -- 待更新 --
