@@ -71,6 +71,10 @@
 - 76.最小覆盖子串 [Leetcode](https://leetcode.com/problems/minimum-window-substring/description/) ｜[力扣](https://leetcode.cn/problems/minimum-window-substring/description/)
 - 30.串联所有单词的子串 [Leetcode](https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/) ｜[力扣](https://leetcode.cn/problems/substring-with-concatenation-of-all-words/description/)
 - 239.滑动窗口最大值 [Leetcode](https://leetcode.com/problems/sliding-window-maximum/description/) ｜[力扣](https://leetcode.cn/problems/sliding-window-maximum/description/) 🔥🔥🔥
+- 1004.最大连续 1 的个数 III
+  [Leetcode](https://leetcode.com/problems/max-consecutive-ones-iii/description/) ｜[力扣](https://leetcode.cn/problems/max-consecutive-ones-iii/description/) 🔥🔥
+- 395.至少有 K 个重复字符的最长子串
+  [Leetcode](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/) ｜[力扣](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/description/) 🔥🔥
 
 ### 二分查找
 
@@ -103,6 +107,10 @@
 
 - 199.二叉树的右视图 [Leetcode](https://leetcode.com/problems/binary-tree-right-side-view/description/) ｜[力扣](https://leetcode.cn/problems/binary-tree-right-side-view/description/) 🔥🔥🔥
 
+### 队列
+
+- 378.有序矩阵中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/description/) 🔥🔥
+
 ### 二叉树
 
 - 105.从前序与中序遍历序列构造二叉树 [Leetcode](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) ｜[力扣](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) 🔥🔥🔥
@@ -111,10 +119,6 @@
 ### 二叉搜索树
 
 - 230.二叉搜索树中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/) 🔥🔥🔥
-
-### 队列
-
-- 378.有序矩阵中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/description/) 🔥🔥
 
 ### 链表
 
