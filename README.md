@@ -103,12 +103,9 @@
 - 133.克隆图 [Leetcode](https://leetcode.com/problems/clone-graph/description/) ｜[力扣](https://leetcode.cn/problems/clone-graph/description/) 🔥🔥
 - 399.除法求值 [Leetcode](https://leetcode.com/problems/evaluate-division/description/) ｜[力扣](https://leetcode.cn/problems/evaluate-division/description/)
 
-### 层序遍历
-
-- 199.二叉树的右视图 [Leetcode](https://leetcode.com/problems/binary-tree-right-side-view/description/) ｜[力扣](https://leetcode.cn/problems/binary-tree-right-side-view/description/) 🔥🔥🔥
-
 ### 队列
 
+- 199.二叉树的右视图 [Leetcode](https://leetcode.com/problems/binary-tree-right-side-view/description/) ｜[力扣](https://leetcode.cn/problems/binary-tree-right-side-view/description/) 🔥🔥🔥
 - 378.有序矩阵中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/description/) 🔥🔥
 
 ### 二叉树
