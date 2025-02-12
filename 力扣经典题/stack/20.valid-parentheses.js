@@ -10,28 +10,27 @@
  * @return {boolean}
  */
 var isValid = function (s) {
-  let stack = [];
-  let map = {
+  let bracketMap = {
     "(": ")",
     "{": "}",
     "[": "]",
   };
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === "(" || s[i] === "[" || s[i] === "{") {
-      stack.push(s[i]);
+  let stack = [];
+
+  for (let t of s) {
+    if (t == "(" || t == "[" || t == "{") {
+      stack.push(t);
     } else {
       let popItem = stack.pop();
-
-      if (map[popItem] != s[i]) {
+      if (bracketMap[popItem] !== t) {
         stack.push(popItem);
-        stack.push(s[i]);
+        stack.push(t);
       }
     }
   }
 
-  if (stack.length == 0) return true;
-  return false;
+  return stack.length == 0 ? true : false;
 };
 // @lc code=end
-let s = "()[]{}";
+let s = "(])]";
 console.log(isValid(s));

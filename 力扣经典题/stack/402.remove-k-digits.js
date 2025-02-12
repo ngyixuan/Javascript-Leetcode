@@ -13,11 +13,13 @@
 var removeKdigits = function (num, k) {
   let stack = [];
   for (let i = 0; i < num.length; i++) {
-    while (stack.length > 0 && stack[stack.length - 1] > num[i] && k > 0) {
+    let item = parseInt(num[i]);
+
+    while (stack.length > 0 && stack[stack.length - 1] > item && k > 0) {
       stack.pop();
       k--;
     }
-    stack.push(num[i]);
+    stack.push(item);
   }
 
   while (k > 0) {
@@ -25,10 +27,11 @@ var removeKdigits = function (num, k) {
     k--;
   }
 
-  let result = stack.join("").replace(/^0+/, "");
-  return result == "" ? "0" : result;
+  let res = stack.join("").replace(/^0+/, "");
+  return res === "" ? "0" : res;
 };
 // @lc code=end
-let num = "10",
-  k = 2;
+let num = "9",
+  k = 1;
+
 console.log(removeKdigits(num, k));
