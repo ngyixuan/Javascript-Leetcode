@@ -20,20 +20,34 @@
 var levelOrder = function (root) {
   let queue = [];
   let res = [];
-  if (root == null) return res;
+  if (root == null) return [];
   queue.push(root);
   while (queue.length > 0) {
-    let path = [];
-    let originalLen = queue.length;
-    for (let i = 0; i < originalLen; i++) {
-      let root = queue.shift();
-      path.push(root.val);
-      if (root.left) queue.push(root.left);
-      if (root.right) queue.push(root.right);
+    let temp = [];
+    let len = queue.length;
+    for (let i = 0; i < len; i++) {
+      let head = queue.shift();
+      temp.push(head.val);
+      if (head.left) queue.push(head.left);
+      if (head.right) queue.push(head.right);
     }
-    res.push(path);
+    res.push(temp);
   }
 
   return res;
 };
 // @lc code=end
+class TreeNode {
+  constructor(val, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+const root = new TreeNode(1);
+root.left = new TreeNode(9);
+root.left.left = new TreeNode(15);
+root.left.right = new TreeNode(7);
+root.right = new TreeNode(20);
+
+console.log(levelOrder(root));

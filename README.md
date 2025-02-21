@@ -102,6 +102,7 @@
 - 130.被围绕的区域 [Leetcode](https://leetcode.com/problems/surrounded-regions/description/) ｜[力扣](https://leetcode.cn/problems/surrounded-regions/description/) 🔥🔥
 - 133.克隆图 [Leetcode](https://leetcode.com/problems/clone-graph/description/) ｜[力扣](https://leetcode.cn/problems/clone-graph/description/) 🔥🔥
 - 399.除法求值 [Leetcode](https://leetcode.com/problems/evaluate-division/description/) ｜[力扣](https://leetcode.cn/problems/evaluate-division/description/)
+- 54.螺旋矩阵 [Leetcode](https://leetcode.com/problems/spiral-matrix/description/) ｜[力扣](https://leetcode.cn/problems/spiral-matrix/description/)
 
 ### 队列
 
@@ -111,12 +112,32 @@
 
 ### 二叉树
 
-- 105.从前序与中序遍历序列构造二叉树 [Leetcode](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) ｜[力扣](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) 🔥🔥🔥
+- 94.二叉树的中序遍历
+  [Leetcode](https://leetcode.com/problems/binary-tree-inorder-traversal/description/) ｜[力扣](https://leetcode.cn/problems/binary-tree-inorder-traversal/description/) 🔥🔥🔥
+- 100.相同的树
+  [Leetcode](https://leetcode.com/problems/same-tree/description/) ｜[力扣](https://leetcode.cn/problems/same-tree/description/) 🔥🔥
+- 101.对称二叉树
+  [Leetcode](https://leetcode.com/problems/symmetric-tree/description/) ｜[力扣](https://leetcode.cn/problems/symmetric-tree/description/) 🔥🔥
+- 102.二叉树的层序遍历
+  [Leetcode](https://leetcode.com/problems/binary-tree-level-order-traversal/) ｜[力扣](https://leetcode.cn/problems/binary-tree-level-order-traversal/description/) 🔥🔥🔥
+- 104.二叉树的最大深度
+  [Leetcode](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) ｜[力扣](https://leetcode.cn/problems/maximum-depth-of-binary-tree/description/) 🔥🔥
+- 105.从前序与中序遍历序列构造二叉树 [Leetcode](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) ｜[力扣](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) 🔥🔥
+- 106.从中序与后序遍历序列构造二叉树 [Leetcode](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/) ｜[力扣](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/)
+- 112.路径总和 [Leetcode](https://leetcode.com/problems/path-sum/description/) ｜[力扣](https://leetcode.cn/problems/path-sum/description/) 🔥🔥
+- 114.二叉树展开为链表 [Leetcode](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/) ｜[力扣](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/)
+- 117.填充每个节点的下一个右侧节点指针 II [Leetcode](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/) ｜[力扣](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/description/)
 - 222.完全二叉树的节点个数 [Leetcode](https://leetcode.com/problems/count-complete-tree-nodes/description/) ｜[力扣](https://leetcode.cn/problems/count-complete-tree-nodes/description/)
 
 ### 二叉搜索树
 
-- 230.二叉搜索树中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/) 🔥🔥🔥
+- 98.验证二叉搜索树 [Leetcode](https://leetcode.com/problems/validate-binary-search-tree/description/) ｜[力扣](https://leetcode.cn/problems/validate-binary-search-tree/description/) 🔥🔥🔥
+- 450.删除二叉搜索树中的节点 [Leetcode](https://leetcode.com/problems/delete-node-in-a-bst/) ｜[力扣](https://leetcode.cn/problems/delete-node-in-a-bst/description/) 🔥🔥
+- 230.二叉搜索树中第 K 小的元素 [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/) ｜[力扣](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/) 🔥🔥
+- 96.不同的二叉搜索树 [Leetcode](https://leetcode.com/problems/unique-binary-search-trees/description/) ｜[力扣](https://leetcode.cn/problems/unique-binary-search-trees/description/) 🔥🔥
+- 108.将有序数组转换为二叉搜索树 [Leetcode](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/) ｜[力扣](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/) 🔥🔥
+- 109.有序链表转换二叉搜索树 [Leetcode](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/description/) ｜[力扣](https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/description/)
+- 235.二叉搜索树的最近公共祖先 [Leetcode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/) ｜[力扣](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
 
 ### 链表
 

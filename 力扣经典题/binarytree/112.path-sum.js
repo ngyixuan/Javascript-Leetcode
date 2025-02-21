@@ -19,21 +19,14 @@
  * @return {boolean}
  */
 var hasPathSum = function (root, targetSum) {
-  let sum = 0;
-  function traverse(root, sum) {
-    if (root == null) return false;
-    sum += root.val;
-    if (root.left == null && root.right == null) return sum == targetSum;
+  if (root == null) return false;
+  if (!root.left && !root.right && root.val === targetSum) return true;
+  let leftTree = hasPathSum(root.left, targetSum - root.val);
+  let rightTree = hasPathSum(root.right, targetSum - root.val);
 
-    let leftSum = traverse(root.left, sum);
-    let rightSum = traverse(root.right, sum);
-
-    return leftSum || rightSum;
-  }
-  return traverse(root, sum);
+  return leftTree || rightTree;
 };
 // @lc code=end
-
 class TreeNode {
   constructor(val, left = null, right = null) {
     this.val = val;
@@ -41,13 +34,14 @@ class TreeNode {
     this.right = right;
   }
 }
-const root = new TreeNode(5);
-root.left = new TreeNode(4);
-root.right = new TreeNode(8);
-root.left.left = new TreeNode(11);
-root.right.left = new TreeNode(13);
-root.right.right = new TreeNode(4);
+const root = new TreeNode(1);
+root.left = new TreeNode(2);
+// root.right = new TreeNode(8);
+// root.left.left = new TreeNode(11);
+// root.left.left.right = new TreeNode(2);
+// root.right.left = new TreeNode(13);
+// root.right.right = new TreeNode(4);
 
-let newRoot = hasPathSum(root, 20);
+let newRoot = hasPathSum(root, 1);
 
 console.log(newRoot);

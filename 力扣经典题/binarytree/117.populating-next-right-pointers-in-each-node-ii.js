@@ -20,36 +20,26 @@
  * @return {_Node}
  */
 var connect = function (root) {
-  if (!root) return;
-  let queue = [root];
-
+  let queue = [];
+  if (root !== null) queue.push(root);
   while (queue.length > 0) {
     let temp = [];
     for (let i = 0; i < queue.length; i++) {
       let node = queue[i];
-
-      if (node.left) {
-        temp.push(node.left);
-      }
-      if (node.right) {
-        temp.push(node.right);
-      }
-
+      if (node.left) temp.push(node.left);
+      if (node.right) temp.push(node.right);
       node.next = queue[i + 1] || null;
     }
-
     queue = temp;
   }
-
   return root;
 };
 // @lc code=end
-class TreeNode {
-  constructor(val, left = null, right = null) {
-    this.val = val;
-    this.left = left;
-    this.right = right;
-  }
+function TreeNode(val, left, right, next) {
+  this.val = val === undefined ? null : val;
+  this.left = left === undefined ? null : left;
+  this.right = right === undefined ? null : right;
+  this.next = next === undefined ? null : next;
 }
 
 // Constructing the tree
@@ -60,6 +50,4 @@ root.left.left = new TreeNode(4);
 root.left.right = new TreeNode(5);
 root.right.right = new TreeNode(7);
 
-let newRoot = connect(root);
-
-console.log(newRoot);
+console.log(connect(root));

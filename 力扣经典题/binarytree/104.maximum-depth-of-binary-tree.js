@@ -18,15 +18,16 @@
  * @return {number}
  */
 var maxDepth = function (root) {
-  let maxDepth = 0;
-  function traverse(root) {
-    if (root == null) return 0;
-    let leftDepth = traverse(root.left);
-    let rightDepth = traverse(root.right);
+  let maxLen = 0;
+  function traverse(node) {
+    if (node == null) return 0;
+    let leftDepth = traverse(node.left);
+    let rightDepth = traverse(node.right);
+
     return 1 + Math.max(leftDepth, rightDepth);
   }
-  maxDepth = traverse(root);
-  console.log(maxDepth);
+
+  return Math.max(traverse(root), maxLen);
 };
 // @lc code=end
 class TreeNode {
@@ -43,3 +44,5 @@ root.left = new TreeNode(9);
 root.right = new TreeNode(20);
 root.right.left = new TreeNode(15);
 root.right.right = new TreeNode(7);
+
+console.log(maxDepth(root));

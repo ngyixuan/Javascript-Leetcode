@@ -18,20 +18,19 @@
  * @return {boolean}
  */
 var isSymmetric = function (root) {
-  function check(leftNode, rightNode) {
-    if (leftNode == null && rightNode == null) return true;
-    if (leftNode == null || rightNode == null) return false;
+  function check(rootLeft, rootRight) {
+    if (rootLeft == null && rootRight == null) return true;
+    if (rootLeft == null || rootRight == null) return false;
+    if (rootLeft.val != rootRight.val) return false;
 
-    if (leftNode.val != rightNode.val) return false;
-    let leftTree = check(leftNode.left, rightNode.right);
-    let rightTree = check(leftNode.right, rightNode.left);
+    let leftTree = check(rootLeft.left, rootRight.right);
+    let rightTree = check(rootLeft.right, rootRight.left);
 
     return leftTree && rightTree;
   }
   return check(root.left, root.right);
 };
 // @lc code=end
-
 class TreeNode {
   constructor(val, left = null, right = null) {
     this.val = val;
@@ -41,10 +40,10 @@ class TreeNode {
 }
 const root = new TreeNode(1);
 root.left = new TreeNode(2);
-// root.left.left = new TreeNode(3);
+root.left.left = new TreeNode(4);
 root.left.right = new TreeNode(3);
 root.right = new TreeNode(2);
-// root.right.left = new TreeNode(4);
-root.right.right = new TreeNode(3);
+root.right.right = new TreeNode(5);
+root.right.left = new TreeNode(3);
 
 console.log(isSymmetric(root));

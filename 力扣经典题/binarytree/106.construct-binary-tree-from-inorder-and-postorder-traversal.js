@@ -23,20 +23,13 @@ var buildTree = function (inorder, postorder) {
   for (let i = 0; i < inorder.length; i++) {
     valToIndex.set(inorder[i], i);
   }
-  var build = function (
-    inorder,
-    inStart,
-    inEnd,
-    postorder,
-    postStart,
-    postEnd
-  ) {
-    if (inStart > inEnd) return null;
-    let rootVal = postorder[postEnd];
-    let rootIndex = valToIndex.get(rootVal);
+  function traverse(inorder, inStart, inEnd, postorder, postStart, postEnd) {
+    if (inEnd < inStart) return null;
+    let rootIndex = valToIndex.get(postorder[postEnd]);
+    let root = new TreeNode(postorder[postEnd]);
     let leftSize = rootIndex - inStart;
-    let root = new TreeNode(rootVal);
-    root.left = build(
+
+    root.left = traverse(
       inorder,
       inStart,
       rootIndex - 1,
@@ -44,8 +37,7 @@ var buildTree = function (inorder, postorder) {
       postStart,
       postStart + leftSize - 1
     );
-
-    root.right = build(
+    root.right = traverse(
       inorder,
       rootIndex + 1,
       inEnd,
@@ -55,9 +47,9 @@ var buildTree = function (inorder, postorder) {
     );
 
     return root;
-  };
+  }
 
-  return build(
+  return traverse(
     inorder,
     0,
     inorder.length - 1,
@@ -66,5 +58,17 @@ var buildTree = function (inorder, postorder) {
     postorder.length - 1
   );
 };
-
 // @lc code=end
+class TreeNode {
+  constructor(val, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+// Constructing the tree
+let inorder = [9, 3, 15, 20, 7],
+  postorder = [9, 15, 7, 20, 3];
+
+console.log(buildTree(inorder, postorder));

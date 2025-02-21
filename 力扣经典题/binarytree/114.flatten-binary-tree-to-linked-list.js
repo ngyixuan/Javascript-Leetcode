@@ -18,23 +18,24 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 var flatten = function (root) {
-  function traverse(root) {
-    if (root == null) return;
-    traverse(root.left);
-    traverse(root.right);
-    let originalRight = root.right;
-    let originalLeft = root.left;
-    root.left = null;
-    root.right = originalLeft;
-    let curr = root;
-    while (curr.right != null) {
+  function traverse(node) {
+    if (node == null) return;
+
+    traverse(node.left);
+    traverse(node.right);
+    let originalRight = node.right;
+    let originalLeft = node.left;
+    node.left = null;
+    node.right = originalLeft;
+    let curr = node;
+    while (curr.right !== null) {
       curr = curr.right;
     }
     curr.right = originalRight;
   }
   traverse(root);
+  return root;
 };
-
 // @lc code=end
 class TreeNode {
   constructor(val, left = null, right = null) {
