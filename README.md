@@ -149,10 +149,12 @@
 - 143.重排链表 [Leetcode](https://leetcode.com/problems/reorder-list/) ｜[力扣](https://leetcode.cn/problems/reorder-list/description/) 🔥🔥🔥
 - 142.环形链表 II [Leetcode](https://leetcode.com/problems/linked-list-cycle-ii/description/) ｜[力扣](https://leetcode.cn/problems/linked-list-cycle-ii/description/) 🔥🔥🔥
 - 82.删除排序链表中的重复元素 II [Leetcode](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/) ｜[力扣](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/description/) 🔥🔥🔥
+- 148.排序链表 [Leetcode](https://leetcode.com/problems/sort-list/description/) ｜[力扣](https://leetcode.cn/problems/sort-list/description/) 🔥🔥🔥
 
 ### 堆
 
--- 待更新 --
+- 215.数组中的第 K 个最大元素 [Leetcode](https://leetcode.com/problems/kth-largest-element-in-an-array/) ｜[力扣](https://leetcode.cn/problems/kth-largest-element-in-an-array/description/) 🔥🔥🔥
+- 347.前 K 个高频元素 [Leetcode](https://leetcode.com/problems/top-k-frequent-elements/description/) ｜[力扣](https://leetcode.cn/problems/top-k-frequent-elements/description/)
 
 ### 回溯算法
 
