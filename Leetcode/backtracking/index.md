@@ -9,6 +9,8 @@
 - 40.组合总和 II [Leetcode](https://leetcode.com/problems/combination-sum-ii/) ｜[力扣](https://leetcode.cn/problems/combination-sum-ii/description/) 🔥🔥🔥
 - 17.电话号码的字母组合 [Leetcode](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/) ｜[力扣](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/)
 - 77.组合 [Leetcode](https://leetcode.com/problems/combinations/description/) ｜[力扣](https://leetcode.cn/problems/combinations/description/)
+- 131.分割回文串 [Leetcode](https://leetcode.com/problems/palindrome-partitioning/description/) ｜[力扣](https://leetcode.cn/problems/palindrome-partitioning/description/)
+- 306.累加数 [Leetcode](https://leetcode.com/problems/additive-number/) ｜[力扣](https://leetcode.cn/problems/additive-number/description/)
 
 ## 回溯算法解题思路
 
