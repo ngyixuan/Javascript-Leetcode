@@ -11,6 +11,9 @@
 - 77.组合 [Leetcode](https://leetcode.com/problems/combinations/description/) ｜[力扣](https://leetcode.cn/problems/combinations/description/)
 - 131.分割回文串 [Leetcode](https://leetcode.com/problems/palindrome-partitioning/description/) ｜[力扣](https://leetcode.cn/problems/palindrome-partitioning/description/)
 - 306.累加数 [Leetcode](https://leetcode.com/problems/additive-number/) ｜[力扣](https://leetcode.cn/problems/additive-number/description/)
+- 89.格雷编码 [Leetcode](https://leetcode.com/problems/gray-code/description/) ｜[力扣](https://leetcode.cn/problems/gray-code/description/)
+- 967.连续差相同的数字 [Leetcode](https://leetcode.com/problems/numbers-with-same-consecutive-differences/) ｜[力扣](https://leetcode.cn/problems/numbers-with-same-consecutive-differences/description/)
+- 90.子集 II [Leetcode](https://leetcode.com/problems/subsets-ii/description/) ｜[力扣](https://leetcode.cn/problems/subsets-ii/description/)
 
 ## 回溯算法解题思路
 
