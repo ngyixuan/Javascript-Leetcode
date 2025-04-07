@@ -15,13 +15,8 @@ var maxSubArray = function (nums) {
   for (let i = 1; i < nums.length; i++) {
     dp[i] = Math.max(nums[i], dp[i - 1] + nums[i]);
   }
-  let res = -Infinity;
-  for (let item of dp) {
-    res = Math.max(res, item);
-  }
-
-  return res;
+  return Math.max(...dp);
 };
 // @lc code=end
-let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+let nums = [1];
 console.log(maxSubArray(nums));

@@ -10,15 +10,17 @@
  * @return {number}
  */
 var climbStairs = function (n) {
-  let memo = new Array(n + 1).fill(0);
-  function dp(n) {
-    if (n <= 2) return n;
-    if (memo[n] > 0) return memo[n];
-    memo[n] = dp(n - 1) + dp(n - 2);
-    return memo[n];
+  let dp = new Array(n + 1).fill(0);
+
+  for (let i = 0; i <= n; i++) {
+    if (i <= 2) {
+      dp[i] = i;
+      continue;
+    }
+    dp[i] = dp[i - 1] + dp[i - 2];
   }
-  return dp(n);
+  return dp[n];
 };
 // @lc code=end
-let n = 3;
+let n = 5;
 console.log(climbStairs(n));
