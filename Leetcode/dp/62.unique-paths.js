@@ -22,6 +22,7 @@ var uniquePaths = function (m, n) {
     if (memo[x][y] > 0) return memo[x][y];
 
     memo[x][y] = dp(x - 1, y) + dp(x, y - 1);
+    console.log(memo);
     return memo[x][y];
   };
 
@@ -29,5 +30,5 @@ var uniquePaths = function (m, n) {
 };
 // @lc code=end
 let m = 3,
-  n = 2;
+  n = 7;
 console.log(uniquePaths(m, n));

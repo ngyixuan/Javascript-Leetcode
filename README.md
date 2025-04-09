@@ -21,7 +21,7 @@
 - [栈](Leetcode/stack/index.md)
 - [回溯算法](Leetcode/backtracking/index.md)
 - [BFS]()
-- [动态规划]()
+- [动态规划](Leetcode/dp/index.md)
 - [贪心算法]()
 - [数学]()
 - [矩阵]()

@@ -47,3 +47,10 @@ var fib = function (N) {
 - 70.爬楼梯 [Leetcode](https://leetcode.com/problems/climbing-stairs/description/) ｜[力扣](https://leetcode.cn/problems/climbing-stairs/description/) 🔥🔥🔥
 - 322.零钱兑换 [Leetcode](https://leetcode.com/problems/coin-change/description/) ｜[力扣](https://leetcode.cn/problems/coin-change/description/) 🔥🔥🔥
 - 221.最大正方形[Leetcode](https://leetcode.com/problems/maximal-square/description/) ｜[力扣](https://leetcode.cn/problems/maximal-square/description/) 🔥🔥🔥
+- 152.乘积最大子数组 [Leetcode](https://leetcode.com/problems/maximum-product-subarray/) ｜[力扣](https://leetcode.cn/problems/maximum-product-subarray/description/) 🔥🔥🔥
+- 62.不同路径 [Leetcode](https://leetcode.com/problems/unique-paths/description/) ｜[力扣](https://leetcode.cn/problems/unique-paths/description/) 🔥🔥🔥
+- 198.打家劫舍 [Leetcode](https://leetcode.com/problems/house-robber/) ｜[力扣](https://leetcode.cn/problems/house-robber/description/) 🔥🔥🔥
+- 718.最长重复子数组 [Leetcode](https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/) ｜[力扣](https://leetcode.cn/problems/maximum-length-of-repeated-subarray/description/) 🔥🔥🔥
+- 139.单词拆分[Leetcode](https://leetcode.com/problems/word-break/description//) ｜[力扣](https://leetcode.cn/problems/word-break/description/) 🔥🔥🔥
+- 518.零钱兑换 II [Leetcode](https://leetcode.com/problems/coin-change-ii/description/) ｜[力扣](https://leetcode.cn/problems/coin-change-ii/description/) 🔥🔥🔥
+- 91.解码方法 [Leetcode](https://leetcode.com/problems/decode-ways/) ｜[力扣](https://leetcode.cn/problems/decode-ways/description/)
