@@ -6,7 +6,7 @@
 
 ## 题目分类
 
-- [动态规划](Leetcode/dp/index.md) ✅ (还有 516 题)
+- [动态规划](Leetcode/dp/index.md) ✅
 - [BFS]()
 - [基础数组+字符串](Leetcode/array+string/index.md)
 - [二分查找](Leetcode/binarySearch/index.md)
