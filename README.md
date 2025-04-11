@@ -6,6 +6,8 @@
 
 ## 题目分类
 
+- [动态规划](Leetcode/dp/index.md) ✅ (还有 516 题)
+- [BFS]()
 - [基础数组+字符串](Leetcode/array+string/index.md)
 - [二分查找](Leetcode/binarySearch/index.md)
 - [滑动窗口](Leetcode/slidingWindow/index.md)
@@ -20,8 +22,6 @@
 - [堆](Leetcode/heap/index.md)
 - [栈](Leetcode/stack/index.md)
 - [回溯算法](Leetcode/backtracking/index.md)
-- [BFS]()
-- [动态规划](Leetcode/dp/index.md)
 - [贪心算法]()
 - [数学]()
 - [矩阵]()
