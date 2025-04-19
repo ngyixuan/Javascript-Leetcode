@@ -59,3 +59,4 @@ var fib = function (N) {
 - 213.打家劫舍 II[Leetcode](https://leetcode.com/problems/house-robber-ii/description/) ｜[力扣](https://leetcode.cn/problems/house-robber-ii/description/)
 - 516.最长回文子序列 [Leetcode](https://leetcode.com/problems/longest-palindromic-subsequence/description/) ｜[力扣](https://leetcode.cn/problems/longest-palindromic-subsequence/description/)
 - 673.最长递增子序列的个数 II[Leetcode](https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/) ｜[力扣](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/description/)
+- 279.完全平方数 [Leetcode](https://leetcode.com/problems/perfect-squares/) ｜[力扣](https://leetcode.cn/problems/perfect-squares/description/)

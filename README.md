@@ -6,8 +6,8 @@
 
 ## 题目分类
 
-- [动态规划](dp/index.md) ✅
-- [BFS]()
+- [动态规划](dp/index.md)
+- [BFS](bfs/index.md)
 - [基础数组+字符串](array+string/index.md)
 - [二分查找](binarySearch/index.md)
 - [滑动窗口](slidingWindow/index.md)
